@@ -1,0 +1,141 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&method=List_Add_Public&name=all-test-list
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=89a31880514edc5995fe5ccaecf6f737; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 13:35:26 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "10"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=10&method=List_Get_Info
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=977bd9b8323d30064eb18965a9079c1b; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 13:35:27 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "{\"listId\":\"10\",\"name\":\"all-test-list\",\"description\":null,\"type\":\"public\",\"optIn\":false}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&method=List_Get_Active_Lists
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=67f0e964490926634977a583d6baa3a6; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 13:35:27 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "{\"10\":{\"listId\":\"10\",\"name\":\"all-test-list\",\"description\":null,\"type\":\"public\",\"optIn\":false}}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=10&method=List_Delete
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=bf618e01722e0f07a564a065382cba70; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 13:35:28 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"

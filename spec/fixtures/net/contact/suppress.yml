@@ -1,0 +1,141 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=8ff27080b969e7b2a3fe90274bd59952; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 12:14:35 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=1d17ccb97ba23527dba6be5044883f2c; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 12:14:25 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "{\"suppressed@example.com\":{\"contactId\":\"10\",\"email\":\"suppressed@example.com\",\"source\":\"API 2 Contact_Add\",\"status\":\"active\",\"customFields\":{\"first_name\":\"\",\"last_name\":\"\",\"email_address\":\"suppressed@example.com\"}}}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Suppress
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=773b2d1074102e7146bc98ece48859ec; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 12:14:36 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Delete
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=5fcc4878163c98134cf5df926dd79c3b; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 02 Aug 2011 12:14:36 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "false"
+    http_version: "1.1"

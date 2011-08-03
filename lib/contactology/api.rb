@@ -1,0 +1,82 @@
+require 'httparty'
+require 'contactology/parser'
+
+module Contactology::API
+  def query(method, attributes = {})
+    configuration = extract_configuration!(attributes)
+    handlers = extract_handlers!(attributes)
+    remove_empty_values!(attributes)
+
+    response = HTTParty.get(configuration.endpoint, {
+      :query => {:key => configuration.key, :method => method}.merge(attributes),
+      :headers => request_headers,
+      :parser => request_parser
+    })
+
+    handle_query_response(response, handlers)
+  end
+
+  def request_headers
+      { 'Accept' => 'application/json', 'User-Agent' => user_agent_string }
+  end
+
+
+  protected
+
+
+  def call_response_handler(handler, response)
+    unless handler.nil?
+      case handler
+      when Proc
+        handler.call(response)
+      when NilClass
+        response
+      else
+        handler
+      end
+    end
+  end
+
+  def extract_configuration!(hash)
+    hash.delete(:configuration) || Contactology.configuration
+  end
+
+  def extract_handlers!(hash)
+    handlers = {}
+    [:on_timeout, :on_success, :on_error].each { |key| handlers[key] = hash.delete(key) }
+    handlers
+  end
+
+  def handle_query_response(response, handlers)
+    case
+    when response.success?
+      parsed = response.parsed_response
+      if parsed.kind_of?(Hash) && (parsed['result'] == 'error' || parsed['success'].kind_of?(FalseClass))
+        call_response_handler(handlers[:on_error], parsed)
+      else
+        call_response_handler(handlers[:on_success], parsed)
+      end
+    when response.timed_out?
+      call_response_handler(handlers[:on_timeout], response)
+    when response.code == 0
+      call_response_handler(handlers[:on_error], response)
+    else
+      call_response_handler(handlers[:on_error], response.parsed_response)
+    end
+  end
+
+  def remove_empty_values!(hash)
+    hash.each_pair do |k,v|
+      hash.delete(k) if v.nil?
+      remove_empty_values!(v) if v.kind_of?(Hash)
+    end
+  end
+
+  def request_parser
+    Contactology::Parser
+  end
+
+  def user_agent_string
+    "contactology/#{Contactology::VERSION} (Rubygems; Ruby #{RUBY_VERSION} #{RUBY_PLATFORM})"
+  end
+end

@@ -1,0 +1,106 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&method=List_Add_Public&name=creationtest
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=18c8d8ea73a7b5ab93165e2c937d906d; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Wed, 03 Aug 2011 14:43:24 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "34"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=34&method=List_Get_Info
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=d50318056dd657b96abb5732c7eeca3d; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Wed, 03 Aug 2011 14:43:25 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "{\"listId\":\"34\",\"name\":\"creationtest\",\"description\":null,\"type\":\"public\",\"optIn\":false}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=34&method=List_Delete
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=ec72b87c3c31ce213585d7f599d5a157; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Wed, 03 Aug 2011 14:43:25 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"

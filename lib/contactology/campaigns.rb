@@ -1,0 +1,2 @@
+module Contactology::Campaigns
+end
