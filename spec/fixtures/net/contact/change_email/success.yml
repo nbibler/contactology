@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?email=changed@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=changed-3@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
     body: 
     headers: 
       accept: 
@@ -17,7 +17,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=89f9fe37b7119eccca61a11b10b26a95; path=/
+      - PHPSESSID=b2a0636af5c8b833ea8b895a9815971b; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -29,7 +29,7 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Tue, 02 Aug 2011 12:30:21 GMT
+      - Wed, 03 Aug 2011 20:07:51 GMT
       server: 
       - lighttpd/1.4.28
     body: "[]"
@@ -37,7 +37,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?email=change-email@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=change-email-3@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
     body: 
     headers: 
       accept: 
@@ -52,7 +52,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=ca4fa1356bc87281528f8af838128ce6; path=/
+      - PHPSESSID=ba9f719821c61d00a31a69369bfb5823; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -64,7 +64,7 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Tue, 02 Aug 2011 12:30:11 GMT
+      - Wed, 03 Aug 2011 20:07:52 GMT
       server: 
       - lighttpd/1.4.28
     body: "true"
@@ -72,7 +72,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?email=change-email@example.com&key=%{API_KEY}&method=Contact_Change_Email&newEmail=changed@example.com
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=change-email-3@example.com&key=%{API_KEY}&method=Contact_Change_Email&newEmail=changed-3@example.com
     body: 
     headers: 
       accept: 
@@ -87,7 +87,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=23b40d2c7462243181f245345ff95ba9; path=/
+      - PHPSESSID=c7c8e99e66ab67485076b3035c6c7463; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -99,15 +99,15 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Tue, 02 Aug 2011 12:30:24 GMT
+      - Wed, 03 Aug 2011 20:07:52 GMT
       server: 
       - lighttpd/1.4.28
-    body: "{\"result\":\"error\",\"message\":\"Unknown Error - An error trace has been generated for investigation by our support team\",\"code\":500}"
+    body: "{\"changed-3@example.com\":{\"contactId\":\"23\",\"email\":\"changed-3@example.com\",\"source\":\"API 2 Contact_Add\",\"status\":\"active\"}}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?email=changed@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=changed-3@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
     body: 
     headers: 
       accept: 
@@ -122,7 +122,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=c42d78b61c6d66344c9125c57263423b; path=/
+      - PHPSESSID=2f2a6314cfefb21624d1cc1e1920a941; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -134,15 +134,15 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Tue, 02 Aug 2011 12:30:13 GMT
+      - Wed, 03 Aug 2011 20:07:42 GMT
       server: 
       - lighttpd/1.4.28
-    body: "[]"
+    body: "{\"changed-3@example.com\":{\"contactId\":\"23\",\"email\":\"changed-3@example.com\",\"source\":\"API 2 Contact_Add\",\"status\":\"active\",\"customFields\":{\"first_name\":\"\",\"last_name\":\"\",\"email_address\":\"changed-3@example.com\"}}}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?email=change-email@example.com&key=%{API_KEY}&method=Contact_Delete
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=changed-3@example.com&key=%{API_KEY}&method=Contact_Delete
     body: 
     headers: 
       accept: 
@@ -157,7 +157,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=cd485ea10c9ca343fb087f54ce7b7ab3; path=/
+      - PHPSESSID=357e7656d4ab547bd7ca4ee6d38da253; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -169,7 +169,7 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Tue, 02 Aug 2011 12:30:25 GMT
+      - Wed, 03 Aug 2011 20:07:53 GMT
       server: 
       - lighttpd/1.4.28
     body: "true"

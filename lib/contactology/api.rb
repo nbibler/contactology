@@ -14,6 +14,8 @@ module Contactology::API
     })
 
     handle_query_response(response, handlers)
+  rescue Timeout::Error
+    call_response_handler(handlers[:on_timeout], nil)
   end
 
   def request_headers
@@ -49,19 +51,15 @@ module Contactology::API
 
   def handle_query_response(response, handlers)
     case
-    when response.success?
-      parsed = response.parsed_response
-      if parsed.kind_of?(Hash) && (parsed['result'] == 'error' || parsed['success'].kind_of?(FalseClass))
-        call_response_handler(handlers[:on_error], parsed)
+    when response.code == 200
+      if response.parsed_response.kind_of?(Hash) &&
+        (response['result'] == 'error' || response['success'].kind_of?(FalseClass))
+        call_response_handler(handlers[:on_error], response)
       else
-        call_response_handler(handlers[:on_success], parsed)
+        call_response_handler(handlers[:on_success], response)
       end
-    when response.timed_out?
-      call_response_handler(handlers[:on_timeout], response)
-    when response.code == 0
-      call_response_handler(handlers[:on_error], response)
     else
-      call_response_handler(handlers[:on_error], response.parsed_response)
+      call_response_handler(handlers[:on_error], response)
     end
   end
 

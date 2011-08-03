@@ -105,6 +105,10 @@ module Contactology
       }))
     end
 
+    def deleted?
+      status == 'deleted'
+    end
+
     ##
     # Public: Removes the contact from Contactology and from your account.
     #
@@ -123,7 +127,7 @@ module Contactology
         :email => email,
         :on_timeout => false,
         :on_error => false,
-        :on_success => true
+        :on_success => Proc.new { |r| self.status = 'deleted'; true }
       }))
     end
 

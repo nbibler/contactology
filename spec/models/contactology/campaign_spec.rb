@@ -13,7 +13,7 @@ describe Contactology::Campaign do
       let(:list) { Factory :list }
       let(:campaign) { Factory :standard_campaign, :recipients => list }
       subject { Contactology::Campaign.find campaign.id }
-      after(:each) { campaign.destroy }
+      after(:each) { list.destroy; campaign.destroy }
 
       it { should be_instance_of Contactology::Campaign }
     end
@@ -61,6 +61,15 @@ describe Contactology::Campaign do
   end
 
   context '#preview' do
-    pending
+    use_vcr_cassette 'campaign/preview', :record => :new_episodes
+    let(:campaign) { Factory :transactional_campaign }
+    after(:each) { campaign.destroy }
+
+    subject { campaign.preview }
+
+    it { should be_kind_of Contactology::Campaign::Preview }
+    its(:text) { should_not be_nil }
+    its(:html) { should_not be_nil }
+    its(:links) { should be_kind_of Enumerable }
   end
 end

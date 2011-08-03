@@ -72,14 +72,10 @@ describe Contactology::Contact do
   context '#change_email' do
     context 'for a known contact' do
       use_vcr_cassette 'contact/change_email/success'
-      let(:contact) { Contactology::Contact.create :email => 'change-email@example.com' }
-      let(:new_email) { 'changed@example.com' }
+      let(:contact) { Contactology::Contact.create :email => 'change-email-3@example.com' }
+      let(:new_email) { 'changed-3@example.com' }
       subject { contact.change_email new_email }
       after(:each) { contact.destroy }
-
-      before(:each) do
-        pending "Contactology server reporting HTTP 500, see https://contactologyhelp.tenderapp.com/discussions/api/10-http-500-on-contact_change_email-api-request"
-      end
 
       it 'updates the Contactology email' do
         expect { subject }.to change { Contactology::Contact.find new_email }.from(nil)
@@ -112,9 +108,8 @@ describe Contactology::Contact do
       let(:contact) { Contactology::Contact.create :email => 'destroy@example.com' }
       subject { contact.destroy }
 
-      it 'removes the contact from Contactology' do
-        pending 'wtf'
-        expect { subject }.to change { Contactology::Contact.find(contact.email) }.to(nil)
+      it 'deletes the contact on Contactology' do
+        expect { subject }.to change(contact, :deleted?).to(true)
       end
 
       it { should be_true }

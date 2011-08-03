@@ -20,8 +20,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'httparty'
 
   s.add_development_dependency 'vcr', '~> 1.5'
-  s.add_development_dependency 'webmock'
   s.add_development_dependency 'rspec', '~> 2.0'
   s.add_development_dependency 'infinity_test'
   s.add_development_dependency 'factory_girl', '~> 2.0'
+  s.add_development_dependency 'rack', '~> 1.2'
+  s.add_development_dependency 'watchr'
 end

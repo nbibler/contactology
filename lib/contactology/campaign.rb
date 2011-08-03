@@ -9,6 +9,8 @@ module Contactology
   # that they're generated per recipient and used multiple times.
   #
   class Campaign < Contactology::Stash
+    autoload :Preview, 'contactology/campaign/preview'
+
     extend API
 
     property :content
@@ -114,7 +116,12 @@ module Contactology
     end
 
     def preview(options = {})
-      raise NotImplementedError
+      self.class.query('Campaign_Preview', options.merge({
+        'campaignId' => id,
+        :on_error => false,
+        :on_timeout => false,
+        :on_success => Proc.new { |response| Preview.new(response) }
+      }))
     end
   end
 end
