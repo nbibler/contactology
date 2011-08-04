@@ -17,7 +17,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=d0c92f636747f8500d31d570731879aa; path=/
+      - PHPSESSID=b4c6126cf13b950744acb296bc086fcb; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -29,15 +29,15 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 03 Aug 2011 18:24:19 GMT
+      - Thu, 04 Aug 2011 00:34:36 GMT
       server: 
       - lighttpd/1.4.28
-    body: "48"
+    body: "49"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=48&method=List_Get_Info
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=49&method=List_Get_Info
     body: 
     headers: 
       accept: 
@@ -52,7 +52,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=200b30d60da4119f08f00ed7f450b6ed; path=/
+      - PHPSESSID=8b4834b312e9b139a10aa8924859946d; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -64,15 +64,15 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 03 Aug 2011 18:24:30 GMT
+      - Thu, 04 Aug 2011 00:34:36 GMT
       server: 
       - lighttpd/1.4.28
-    body: "{\"listId\":\"48\",\"name\":\"Factory List\",\"description\":null,\"type\":\"public\",\"optIn\":false}"
+    body: "{\"listId\":\"49\",\"name\":\"Factory List\",\"description\":null,\"type\":\"public\",\"optIn\":false}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?campaignName=factory%20campaign&key=%{API_KEY}&method=Campaign_Create_Standard&senderEmail=nate@envylabs.com&senderName=Nate%20Bibler&subject=Factory%20Campaign%20Message&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&recipients%5Blist%5D=48
+    uri: https://api.emailcampaigns.net:443/2/REST/?campaignName=factory%20campaign&key=%{API_KEY}&method=Campaign_Create_Standard&senderEmail=nate@envylabs.com&senderName=Nate%20Bibler&subject=Factory%20Campaign%20Message&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&recipients%5Blist%5D=49
     body: 
     headers: 
       accept: 
@@ -87,7 +87,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=3d447eedd05bb105d95e91436d977b25; path=/
+      - PHPSESSID=37423f919cb1a887aae7bfbf5746265d; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -99,15 +99,15 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 03 Aug 2011 18:24:31 GMT
+      - Thu, 04 Aug 2011 00:34:37 GMT
       server: 
       - lighttpd/1.4.28
-    body: "35"
+    body: "43"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?campaignId=35&key=%{API_KEY}&method=Campaign_Get_Info
+    uri: https://api.emailcampaigns.net:443/2/REST/?campaignId=43&key=%{API_KEY}&method=Campaign_Get_Info
     body: 
     headers: 
       accept: 
@@ -122,7 +122,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=2f869629a5e7cb92b08c55f9c859f3fb; path=/
+      - PHPSESSID=6d83aed2b03152e60c6403c5e121ae70; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -134,15 +134,15 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 03 Aug 2011 18:24:32 GMT
+      - Thu, 04 Aug 2011 00:34:37 GMT
       server: 
       - lighttpd/1.4.28
-    body: "{\"campaignId\":\"35\",\"campaignName\":\"factory campaign\",\"type\":\"standard\",\"contentType\":\"standard\",\"status\":\"draft\",\"recipients\":{\"list\":[\"48\"]},\"subject\":\"Factory Campaign Message\",\"senderName\":\"Nate Bibler\",\"senderEmail\":\"nate@envylabs.com\",\"recipientName\":\"\",\"replyToName\":\"\",\"replyToEmail\":null,\"content\":{\"html\":\"\",\"text\":\"This is a good message! {COMPANY_ADDRESS}\"},\"startTime\":\"2011-08-03 18:24:31\",\"authenticate\":false,\"trackReplies\":false,\"showInArchive\":false,\"viewInBrowser\":false,\"trackOpens\":true,\"trackClickThruHTML\":true,\"trackClickThruText\":true,\"googleAnalyticsName\":null,\"automaticTweet\":false,\"clickTaleName\":null,\"clickTaleCustomFields\":[\"\"],\"useCustomUrlParameters\":null,\"customUrlParameters\":null}"
+    body: "{\"campaignId\":\"43\",\"campaignName\":\"factory campaign\",\"type\":\"standard\",\"contentType\":\"standard\",\"status\":\"draft\",\"recipients\":{\"list\":[\"49\"]},\"subject\":\"Factory Campaign Message\",\"senderName\":\"Nate Bibler\",\"senderEmail\":\"nate@envylabs.com\",\"recipientName\":\"\",\"replyToName\":\"\",\"replyToEmail\":null,\"content\":{\"html\":\"\",\"text\":\"This is a good message! {COMPANY_ADDRESS}\"},\"startTime\":\"2011-08-04 00:34:37\",\"authenticate\":false,\"trackReplies\":false,\"showInArchive\":false,\"viewInBrowser\":false,\"trackOpens\":true,\"trackClickThruHTML\":true,\"trackClickThruText\":true,\"googleAnalyticsName\":null,\"automaticTweet\":false,\"clickTaleName\":null,\"clickTaleCustomFields\":[\"\"],\"useCustomUrlParameters\":null,\"customUrlParameters\":null}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.emailcampaigns.net:443/2/REST/?campaignId=35&key=%{API_KEY}&method=Campaign_Delete
+    uri: https://api.emailcampaigns.net:443/2/REST/?key=%{API_KEY}&listId=49&method=List_Delete
     body: 
     headers: 
       accept: 
@@ -157,7 +157,7 @@
       x-powered-by: 
       - PHP/5.2.10
       set-cookie: 
-      - PHPSESSID=7d66adc8a23b52086f3b2b38aa89d3a9; path=/
+      - PHPSESSID=5306caded3b82d7f9d3aca1a0febcc94; path=/
       expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       cache-control: 
@@ -169,7 +169,42 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 03 Aug 2011 18:24:32 GMT
+      - Thu, 04 Aug 2011 00:34:38 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?campaignId=43&key=%{API_KEY}&method=Campaign_Delete
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.1 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=f41661b25420f1620fda32135c5233e4; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 04 Aug 2011 00:34:27 GMT
       server: 
       - lighttpd/1.4.28
     body: "true"
