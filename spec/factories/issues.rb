@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 Factory.define :issue, :class => Contactology::Issue do |i|
   i.level ''
   i.type 'SPAM'

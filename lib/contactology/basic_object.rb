@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 module Contactology
   if defined? ::BasicObject
     # A class with no predefined methods that behaves similarly to Builder's

@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'contactology/stash'
 require 'contactology/api' 
 
