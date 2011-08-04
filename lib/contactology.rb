@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'contactology/version'
 require 'contactology/errors'
 require 'contactology/campaigns/standard'

@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 module Contactology
   class Issue
     attr_reader :type

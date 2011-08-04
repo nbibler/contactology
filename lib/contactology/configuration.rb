@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 ##
 # Holds configuration objects used by the library.  The Contactology module
 # holds reference to a default Configuration, which will be used when no

@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 Dir[File.expand_path('../../factories', __FILE__) + '/*.rb'].each do |factory|
   require factory
 end

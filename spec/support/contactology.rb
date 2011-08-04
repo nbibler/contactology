@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'pathname'
 
 path = Pathname.new(File.expand_path('../../contactology.yml', __FILE__))

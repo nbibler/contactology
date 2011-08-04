@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'contactology/basic_object'
 require 'contactology/list'
 

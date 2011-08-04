@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 Factory.define :standard_campaign, :class => Contactology::Campaigns::Standard do |c|
   c.content 'text' => 'This is a good message! {COMPANY_ADDRESS}'
   c.name 'factory campaign'
