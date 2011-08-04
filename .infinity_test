@@ -2,7 +2,7 @@
 
 infinity_test do
   notifications :growl
-  use :rubies => %w(1.9.2-p180 1.8.7-p334), :gemset => 'contactology', :test_framework => :rspec
+  use :rubies => %w(1.9.2-p180 1.9.2-p290 1.8.7-p334), :gemset => 'contactology', :test_framework => :rspec
 
   before_run do
     clear :terminal
