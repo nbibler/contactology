@@ -55,7 +55,8 @@ This library uses [Travis CI][ci] to continuously test and remain compatible
 with the following Rubies:
 
 * MRI Ruby 1.8.7,
-* MRI Ruby 1.9.2, and
+* MRI Ruby 1.9.2,
+* MRI Ruby 1.9.3, and
 * REE 1.8.7
 
 
