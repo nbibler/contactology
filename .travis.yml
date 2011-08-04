@@ -4,4 +4,4 @@ rvm:
   - 1.9.2-p180
   - 1.9.2
   - 1.9.3
-script: "rvm install 1.9.2-p180; cp spec/contactology.example.yml spec/contactology.yml; bundle exec rake spec"
+script: "cp spec/contactology.example.yml spec/contactology.yml; bundle exec rake spec"
