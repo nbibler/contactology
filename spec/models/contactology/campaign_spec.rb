@@ -49,11 +49,12 @@ describe Contactology::Campaign do
   end
 
   context '#destroy' do
-    use_vcr_cassette 'campaign/destroy'
+    use_vcr_cassette 'campaign/destroy', :record => :new_episodes
     let(:list) { Factory :list }
     let(:campaign) { Factory :standard_campaign, :recipients => list }
+    after(:each) { list.destroy }
 
-    subject { list.destroy; campaign.destroy }
+    subject { campaign.destroy }
 
     it 'removes the campaign from Contactology' do
       expect { subject }.to change { Contactology::Campaign.find campaign.id }.to(nil)
@@ -63,7 +64,7 @@ describe Contactology::Campaign do
   end
 
   context '#preview' do
-    use_vcr_cassette 'campaign/preview', :record => :new_episodes
+    use_vcr_cassette 'campaign/preview'
     let(:campaign) { Factory :transactional_campaign }
     after(:each) { campaign.destroy }
 
