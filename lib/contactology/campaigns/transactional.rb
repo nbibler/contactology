@@ -51,10 +51,37 @@ class Contactology::Campaigns::Transactional < Contactology::Campaign
   end
 
 
+  ##
+  # Public: Sends the campaign.
+  #
+  # Returns an empty collection when successful.
+  # Returns a collection of issues when unsuccessful.
+  #
+  def send_campaign(*contacts)
+    options = contacts.extract_options!
+    replacements = [options.delete(:replacements)].flatten.compact
+
+    self.class.query('Campaign_Send_Transactional_Multiple', options.merge({
+      'campaignId' => id,
+      'contacts' => contacts.collect { |c| {'email' => c.email} },
+      'source' => options[:source] || 'Customer',
+      'replacements' => replacements,
+      'optionalParameters' => { 'continueOnError' => true },
+      :on_error => Proc.new { |response| process_send_campaign_result response },
+      :on_timeout => Proc.new { process_send_campaign_result('success' => false, 'issues' => {'issues' => [{'text' => 'Connection error'}]}) },
+      :on_success => Proc.new { process_send_campaign_result({'success' => true}) }
+    }))
+  end
+
+
   private
 
 
   def process_send_campaign_result(data)
-    Contactology::SendResult.new(data)
+    if data['errors'].nil?
+      Contactology::SendResult.new(data)
+    else
+      Contactology::SendResult.new('success' => false, 'issues' => {'issues' => data['errors'].collect { |e| {'type' => "#{e['_msg_']} (##{e['_err_']})", 'text' => "#{e['email']} (from #{e['source']})"}} })
+    end
   end
 end
