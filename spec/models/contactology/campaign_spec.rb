@@ -17,7 +17,7 @@ describe Contactology::Campaign do
       subject { Contactology::Campaign.find campaign.id }
       after(:each) { list.destroy; campaign.destroy }
 
-      it { should be_instance_of Contactology::Campaign }
+      it { should be_a Contactology::Campaign }
     end
 
     context 'for an unknown campaign' do
@@ -36,7 +36,7 @@ describe Contactology::Campaign do
       after(:each) { list.destroy; campaign.destroy }
       subject { Contactology::Campaign.find_by_name campaign.name }
 
-      it { should be_instance_of Contactology::Campaign }
+      it { should be_a Contactology::Campaign }
       its(:name) { should == campaign.name }
     end
 
