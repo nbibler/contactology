@@ -11,8 +11,7 @@ module Contactology
     attr_reader :issues
 
     def initialize(response)
-      @success = response['success']
-      @issues = Issues.new(response['issues'])
+      load_response response
     end
 
     ##
@@ -32,6 +31,24 @@ module Contactology
     #
     def score
       @issues.score
+    end
+
+
+    private
+
+
+    def load_response(response)
+      unless erred_response?(response)
+        @success = response['success']
+        @issues = Issues.new(response['issues'])
+      else
+        @success = false
+        @issues = Issues.new({'issues' => [{'text' => response['message']}]})
+      end
+    end
+
+    def erred_response?(response)
+      response['result'] && response['result'] == 'error'
     end
   end
 end
