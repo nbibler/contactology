@@ -60,7 +60,7 @@ class Contactology::Campaigns::Standard < Contactology::Campaign
     self.class.query('Campaign_Send', options.merge({
       'campaignId' => id,
       :on_error => Proc.new { |response| process_send_campaign_result response },
-      :on_timeout => process_send_campaign_result({'success' => false, 'issues' => [{'text' => 'Connection timeout'}]}),
+      :on_timeout => process_send_campaign_result({'success' => false, 'issues' => {'issues' => [{'text' => 'Connection timeout'}]}}),
       :on_success => Proc.new { |response| process_send_campaign_result response }
     }))
   end
