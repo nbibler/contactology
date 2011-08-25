@@ -75,7 +75,10 @@ module Contactology
           'campaignName' => name
         },
         :on_success => Proc.new { |r|
-          new_campaign_from_response(r.values.first) unless r.nil?
+          unless r.nil?
+            data = r.values.max { |a,b| a['startTime'] <=> b['startTime'] }
+            new_campaign_from_response(data)
+          end
         }
       }))
     end
