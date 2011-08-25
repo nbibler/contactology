@@ -45,7 +45,7 @@ class Contactology::Campaigns::Transactional < Contactology::Campaign
         'viewInBrowser' => view_in_browser
       },
       :on_error => Proc.new { |response| process_send_campaign_result response },
-      :on_timeout => process_send_campaign_result('success' => false, 'issues' => [{'text' => 'Connection error'}]),
+      :on_timeout => Proc.new { process_send_campaign_result('success' => false, 'issues' => {'issues' => [{'text' => 'Connection error'}]}) },
       :on_success => Proc.new { |response| self.id = response; self }
     }))
   end
