@@ -1,3 +1,15 @@
+### 0.1.2 / 2011-08-25
+
+[full changelog](http://github.com/nbibler/contactology/compare/v0.1.1...v0.1.2)
+
+* Enhancement
+  * Campaign.find_by_name now returns the newest, matching campaign
+  * Campaign#start_time is now returned as a Time instance
+
+* Bug fixes
+  * SendResult now captures generic API errors
+  * Campaign children now have proper reference of their parent properties
+
 ### 0.1.1 / 2011-08-25
 
 [full changelog](http://github.com/nbibler/contactology/compare/v0.1.0...v0.1.1)

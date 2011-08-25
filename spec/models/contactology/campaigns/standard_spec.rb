@@ -74,6 +74,33 @@ describe Contactology::Campaigns::Standard do
       its(:issues) { should_not be_empty }
       its(:score) { should be < 100 }
     end
+
+    context 'when unsuccessful (attributes missing)' do
+      use_vcr_cassette 'campaigns/standard/send_campaign/failure_missing_attributes', record: :new_episodes
+      let(:list) { Factory :list, :name => 'send-standard-campaign-failure' }
+      let(:contact) { Factory :contact }
+      let(:campaign) { Factory :standard_campaign, :recipients => list }
+
+      before(:each) { list.subscribe(contact); campaign.id = nil }
+      after(:each) { list.destroy; contact.destroy; campaign.destroy }
+
+      subject { campaign.send_campaign }
+
+      it { should be_instance_of Contactology::SendResult }
+      it { should_not be_successful }
+
+      context 'issues' do
+        subject { campaign.send_campaign.issues }
+
+        it { should_not be_empty }
+
+        it 'contains a message about the missing ID' do
+          subject.any? { |i|
+            i.text == 'Missing parameter campaignId for Campaign_Send'
+          }.should be_true
+        end
+      end
+    end
   end
 
 

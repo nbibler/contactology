@@ -75,7 +75,10 @@ module Contactology
           'campaignName' => name
         },
         :on_success => Proc.new { |r|
-          new_campaign_from_response(r.values.first) unless r.nil?
+          unless r.nil?
+            data = r.values.max { |a,b| a['startTime'] <=> b['startTime'] }
+            new_campaign_from_response(data)
+          end
         }
       }))
     end
@@ -113,6 +116,12 @@ module Contactology
     #
     def save!(options = {})
       save(options) || raise(InvalidObjectError)
+    end
+
+    def start_time
+      if self['start_time']
+        Time.strptime(self['start_time'] + 'Z', '%Y-%m-%d %H:%M:%S%Z')
+      end
     end
 
     def preview(options = {})
