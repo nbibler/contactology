@@ -118,6 +118,12 @@ module Contactology
       save(options) || raise(InvalidObjectError)
     end
 
+    def start_time
+      if self['start_time']
+        Time.strptime(self['start_time'] + 'Z', '%Y-%m-%d %H:%M:%S%Z')
+      end
+    end
+
     def preview(options = {})
       self.class.query('Campaign_Preview', options.merge({
         'campaignId' => id,
