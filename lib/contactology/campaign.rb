@@ -65,9 +65,7 @@ module Contactology
     def self.find(id, options = {})
       query('Campaign_Get_Info', options.merge({
         'campaignId' => id,
-        :on_success => Proc.new { |response|
-          Campaign.new(response) if response.kind_of?(Hash)
-        }
+        :on_success => Proc.new { |r| new_campaign_from_response(r) }
       }))
     end
 
@@ -76,8 +74,8 @@ module Contactology
         'searchParameters' => {
           'campaignName' => name
         },
-        :on_success => Proc.new { |response|
-          Campaign.new(response.values.first) unless response.nil?
+        :on_success => Proc.new { |r|
+          new_campaign_from_response(r.values.first) unless r.nil?
         }
       }))
     end
@@ -124,6 +122,21 @@ module Contactology
         :on_timeout => false,
         :on_success => Proc.new { |response| Preview.new(response) }
       }))
+    end
+
+
+    private
+
+
+    def self.new_campaign_from_response(response)
+      case response['type']
+      when 'transactional'
+        Campaigns::Transactional.new(response)
+      when 'standard'
+        Campaigns::Standard.new(response)
+      else
+        Campaign.new(response)
+      end
     end
   end
 end
