@@ -16,7 +16,7 @@ module Contactology
       @message = details['message']
       @context = details['context']
       @col = details['col']
-      @deduction = details['deduction']
+      @deduction = details['deduction'] || 0
     end
 
     def to_s

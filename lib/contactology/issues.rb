@@ -7,7 +7,7 @@ module Contactology
     attr_reader :score
 
     def initialize(data = nil)
-      data = Hash.new unless data.kind_of?(Hash)
+      data = Hash.new unless data.is_a?(Hash)
       @score = data['score'] || 0
       (data['issues'] || []).each { |i| self << i }
     end

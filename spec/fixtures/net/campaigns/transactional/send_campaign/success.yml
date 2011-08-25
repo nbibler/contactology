@@ -1,0 +1,176 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?campaignName=factory%20campaign&key=%{API_KEY}&method=Campaign_Create_Transactional&senderEmail=sender@example.com&senderName=Sender%20Example&subject=Test%20Creation&content%5Btext%5D=This%20is%20a%20good%20email.%20%7BCOMPANY_ADDRESS%7D&testContact%5Bemail%5D=test-contact@example.com&testReplacements%5Bfirst_name%5D=John
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.2 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=ea3b263e73dd6f642db5b80c7c201eef; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 25 Aug 2011 15:52:04 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "53"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=factory-contact@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.2 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=91d37cb1385416c860e6fea9b9902a3a; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 25 Aug 2011 15:52:06 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?campaignId=53&key=%{API_KEY}&method=Campaign_Send_Transactional_Multiple&source=Customer&contacts%5Bemail%5D=factory-contact@example.com&optionalParameters%5BcontinueOnError%5D=true
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.2 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=efa7362c6aa9567372b2a6c3a93035cc; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 25 Aug 2011 15:52:07 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?campaignId=53&key=%{API_KEY}&method=Campaign_Delete
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.2 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=47cde51d75b18399e630ebbcc05a64ca; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 25 Aug 2011 15:52:15 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.emailcampaigns.net:443/2/REST/?email=factory-contact@example.com&key=%{API_KEY}&method=Contact_Delete
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - contactology/0.0.2 (Rubygems; Ruby 1.9.2 x86_64-darwin10.7.1)
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - PHP/5.2.10
+      set-cookie: 
+      - PHPSESSID=9acedc6330d095394297fa17b0a7708e; path=/
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      content-type: 
+      - text/plain;charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 25 Aug 2011 15:52:16 GMT
+      server: 
+      - lighttpd/1.4.28
+    body: "true"
+    http_version: "1.1"

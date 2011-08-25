@@ -1,5 +1,6 @@
 # encoding: UTF-8
 
+require 'contactology/core_ext/array'
 require 'contactology/version'
 require 'contactology/errors'
 require 'contactology/campaigns/standard'

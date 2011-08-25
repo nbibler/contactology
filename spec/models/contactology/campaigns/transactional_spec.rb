@@ -27,4 +27,36 @@ describe Contactology::Campaigns::Transactional do
       its(:issues) { should_not be_empty }
     end
   end
+
+
+  context '#send_campaign' do
+    context 'when successful' do
+      use_vcr_cassette 'campaigns/transactional/send_campaign/success'
+      let(:contact) { Factory :contact }
+      let(:campaign) { Factory :transactional_campaign }
+
+      after(:each) do
+        campaign.destroy
+        contact.destroy
+      end
+
+      subject { campaign.send_campaign(contact) }
+
+      it { should be_instance_of Contactology::SendResult }
+      it { should be_successful }
+      its(:issues) { should be_empty }
+    end
+
+    context 'when unsuccessful' do
+      use_vcr_cassette 'campaigns/transactional/send_campaign/failure'#, record: :new_episodes
+      let(:campaign) { Factory :transactional_campaign }
+      after(:each) { campaign.destroy }
+
+      subject { campaign.send_campaign(Struct.new(:email).new('bad')) }
+
+      it { should be_kind_of Contactology::SendResult }
+      it { should_not be_successful }
+      its(:issues) { should_not be_empty }
+    end
+  end
 end

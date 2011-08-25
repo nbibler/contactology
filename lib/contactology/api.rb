@@ -55,7 +55,7 @@ module Contactology::API
     case
     when response.code == 200
       if response.parsed_response.kind_of?(Hash) &&
-        (response['result'] == 'error' || response['success'].kind_of?(FalseClass))
+        (response['result'] == 'error' || response['success'].kind_of?(FalseClass) || (response['errors'] && !response['errors'].empty?))
         call_response_handler(handlers[:on_error], response)
       else
         call_response_handler(handlers[:on_success], response)
