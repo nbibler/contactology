@@ -171,7 +171,7 @@ module Contactology
         :email => email,
         :on_timeout => false,
         :on_error => false,
-        :on_success => Proc.new { |response| response }
+        :on_success => Proc.new { |r| r }
       }))
 
       if response
