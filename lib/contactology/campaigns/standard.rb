@@ -4,6 +4,32 @@ require 'contactology/campaign'
 require 'contactology/campaigns'
 
 class Contactology::Campaigns::Standard < Contactology::Campaign
+  property :content
+  property :content_type, :from => :contentType
+  property :id, :from => :campaignId
+  property :name, :from => :campaignName
+  property :recipient_name, :from => :recipientName
+  property :recipients
+  property :reply_to_email, :from => :replyToEmail
+  property :reply_to_name, :from => :replyToName
+  property :sender_email, :from => :senderEmail
+  property :sender_name, :from => :senderName
+  property :status
+  property :subject
+  property :type
+  property :start_time, :from => :startTime
+  property :authenticate
+  property :track_replies, :from => :trackReplies
+  property :show_in_archive, :from => :showInArchive
+  property :view_in_browser, :from => :viewInBrowser
+  property :track_opens, :from => :trackOpens
+  property :track_click_thru_html, :from => :trackClickThruHTML
+  property :track_click_thru_text, :from => :trackClickThruText
+  property :google_analytics_name, :from => :googleAnalyticsName
+  property :automatic_tweet, :from => :automaticTweet
+  property :click_tale_name, :from => :clickTaleName
+  property :click_tale_custom_fields, :from => :clickTaleCustomFields
+  property :custom_fields, :from => :customFields
   property :content, :required => true
   property :name, :from => :campaignName, :required => true
   property :recipients, :required => true
