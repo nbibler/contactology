@@ -1,3 +1,10 @@
+### 0.1.1 / 2011-08-25
+
+[full changelog](http://github.com/nbibler/contactology/compare/v0.1.0...v0.1.1)
+
+* Bug fixes
+  * Return the correct campaign class from Campaign#find and Campaign#find_by_name
+
 ### 0.1.0 / 2011-08-25
 
 [full changelog](http://github.com/nbibler/contactology/compare/v0.0.2...v0.1.0)
