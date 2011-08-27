@@ -49,7 +49,7 @@ describe Contactology::Campaign do
   end
 
   context '#destroy' do
-    use_vcr_cassette 'campaign/destroy', :record => :new_episodes
+    use_vcr_cassette 'campaign/destroy'
     let(:list) { Factory :list }
     let(:campaign) { Factory :standard_campaign, :recipients => list }
     after(:each) { list.destroy }

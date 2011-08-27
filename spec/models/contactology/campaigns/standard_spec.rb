@@ -76,7 +76,7 @@ describe Contactology::Campaigns::Standard do
     end
 
     context 'when unsuccessful (attributes missing)' do
-      use_vcr_cassette 'campaigns/standard/send_campaign/failure_missing_attributes', record: :new_episodes
+      use_vcr_cassette 'campaigns/standard/send_campaign/failure_missing_attributes'
       let(:list) { Factory :list, :name => 'send-standard-campaign-failure' }
       let(:contact) { Factory :contact }
       let(:campaign) { Factory :standard_campaign, :recipients => list }
