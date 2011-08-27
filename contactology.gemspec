@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'multi_json', '~> 1.0'
 
   s.add_development_dependency 'vcr', '~> 1.5'
+  s.add_development_dependency 'webmock', '~> 1.6'
   s.add_development_dependency 'rspec', '~> 2.0'
   s.add_development_dependency 'infinity_test'
   s.add_development_dependency 'factory_girl', '~> 2.0'
