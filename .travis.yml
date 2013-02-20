@@ -7,3 +7,7 @@ before_script:
   - cp spec/contactology.example.yml spec/contactology.yml
 script:
   - bundle exec rspec spec
+notifications:
+  email:
+    on_success: change
+    on_failure: always
