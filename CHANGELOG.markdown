@@ -26,7 +26,7 @@
   * Return the correct campaign class from Campaign#find and
     Campaign#find\_by\_name
 
-### [0.1.0][v0.1.0] / 2011-08-25
+## [0.1.0][v0.1.0] / 2011-08-25
 
 * Enhancements
   * Add Contactology::Campaigns::Transactional#send\_campaign
