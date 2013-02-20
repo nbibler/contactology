@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'hashie', '~> 1.1'
+  s.add_dependency 'hashie', '>= 1.1', '< 3.0'
   s.add_dependency 'httparty', '>= 0.7.8', '>= 0.10.2'
   s.add_dependency 'multi_json', '~> 1.0'
 
