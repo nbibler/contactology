@@ -4,10 +4,10 @@
 
 * Enhancement
   * Updated and/or loosened dependent library versions in runtime and
-    development. This, though, means that testing is no longer maintained for
-    MRI 1.8.7 or REE. Currently, the library does support them, but development
-    dependencies will not install and therefore cannot be explicitly tested in
-    those environments.
+    development. This, though, means that **testing is no longer maintained for
+    MRI 1.8.7 or REE**. Currently, the library does support them, but
+    development dependencies will not install and therefore cannot be
+    explicitly tested in those environments.
   * Removed json\_pure, watchr, and infinity\_test development dependencies.
 
 ## [0.1.2][v0.1.2] / 2011-08-25
