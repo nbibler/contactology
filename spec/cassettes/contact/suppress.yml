@@ -1,0 +1,168 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=52d14f2b030717693bc413b96e326e8f; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:29 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:29 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=eb7ad25c2bdce4ee509ffeab17cdd3af; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:29 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"suppressed@example.com":{"contactId":"10","email":"suppressed@example.com","source":"API
+        2 Contact_Add","status":"active","customFields":{"first_name":"","last_name":"","email_address":"suppressed@example.com"}}}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:29 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Suppress
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=6d34405854e08f1d315f1bab0989c53b; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:30 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'false'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:30 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=suppressed@example.com&key=%{API_KEY}&method=Contact_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=1b4a36c99e46e6c0943794485989ee71; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:30 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'false'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:30 GMT
+recorded_with: VCR 2.4.0

@@ -31,8 +31,7 @@ describe Contactology::TransactionalMessage do
   end
 
   context '#send_message' do
-    context 'when successful' do
-      use_vcr_cassette 'transactional_message/send_message/success'
+    context 'when successful', :vcr => {:cassette_name => 'transactional_message/send_message/success'} do
       let(:contact) { Factory :contact }
       let(:campaign) { Factory :transactional_campaign }
       let(:message) { Factory.build_via_new :transactional_message, :campaign => campaign, :contact => contact }
@@ -43,8 +42,7 @@ describe Contactology::TransactionalMessage do
       it { should be_true }
     end
 
-    context 'when unsuccessful' do
-      use_vcr_cassette 'transactional_message/send_message/failure'
+    context 'when unsuccessful', :vcr => {:cassette_name => 'transactional_message/send_message/failure'} do
       let(:contact) { Factory :contact }
       let(:campaign) { Factory :transactional_campaign }
       let(:message) { Factory.build_via_new :transactional_message, :campaign => campaign, :contact => contact }

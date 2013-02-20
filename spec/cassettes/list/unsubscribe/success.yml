@@ -1,0 +1,291 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&method=List_Add_Public&name=unsubscribe-test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=140e9aec2d5e61a9ec1fac4ec284b20b; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:05 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: '141'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:05 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=141&method=List_Get_Info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=35de605f387fa67a9d8cccd1cd9608ab; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:05 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"listId":"141","name":"unsubscribe-test","description":null,"type":"public","created":"2013-02-20
+        04:12:05","optIn":false}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:05 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=successful-unsubscribe@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=1259adb29f26da19955b52a5a441a2cd; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:05 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'false'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:06 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=successful-unsubscribe@example.com&key=%{API_KEY}&listId=141&method=List_Subscribe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=e0573de8ac7421f2f2f263760e720af5; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:06 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:06 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=successful-unsubscribe@example.com&key=%{API_KEY}&listId=141&method=List_Unsubscribe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=82052b14463df5c2f99e82a70c10f2e6; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:06 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:06 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=successful-unsubscribe@example.com&key=%{API_KEY}&method=Contact_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=381295222f9c8a8306f41c57392a25b1; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:07 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:07 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=141&method=List_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=c22dfdcb270ec77e83c3d4ce2fb0a133; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:12:07 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:12:07 GMT
+recorded_with: VCR 2.4.0

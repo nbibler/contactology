@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=active@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=c12204b462a1ac407e36f8c14ac75832; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:34 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:34 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=active@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=86a10512b6463b12070b08af7d67d408; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:34 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"active@example.com":{"contactId":"9","email":"active@example.com","source":"API
+        2 Contact_Add","status":"active","customFields":{"first_name":"","last_name":"","email_address":"active@example.com"}}}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:34 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?email=active@example.com&key=%{API_KEY}&method=Contact_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=195700ad700170282359e9f461c5c0ed; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 03:42:34 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 03:42:34 GMT
+recorded_with: VCR 2.4.0

@@ -1,0 +1,251 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&method=List_Add_Public&name=destroy-list
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=aa3a906afd8607a79a67de168504c1b3; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:16:46 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: '153'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:16:46 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=153&method=List_Get_Info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=f9c0ac36d51f615fff8cb031eb9e139b; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:16:46 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"listId":"153","name":"destroy-list","description":null,"type":"public","created":"2013-02-20
+        04:16:46","optIn":false}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:16:47 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=153&method=List_Get_Info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=3e390cf93a639495090e421238718971; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:16:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"listId":"153","name":"destroy-list","description":null,"type":"public","created":"2013-02-20
+        04:16:46","optIn":false}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:16:47 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=153&method=List_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=519046ba9cc157642dff1ddc012236de; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:16:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:16:47 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=153&method=List_Get_Info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=e1437bad575575adf9fa0db8cdeecf90; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:16:48 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":"error","message":"Input Error: List 153 does not exist","code":601}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:16:48 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=153&method=List_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=dd5361cc4dd40d118f876d8ba1654976; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 04:16:48 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"result":"error","message":"Input Error: List 153 does not exist","code":601}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:16:48 GMT
+recorded_with: VCR 2.4.0

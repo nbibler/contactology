@@ -18,10 +18,10 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'hashie', '~> 1.1'
-  s.add_dependency 'httparty', '~> 0.7.8'
+  s.add_dependency 'httparty', '>= 0.7.8', '>= 0.10.2'
   s.add_dependency 'multi_json', '~> 1.0'
 
-  s.add_development_dependency 'vcr', '~> 1.5'
+  s.add_development_dependency 'vcr', '~> 2.0'
   s.add_development_dependency 'webmock', '~> 1.6'
   s.add_development_dependency 'rspec', '~> 2.0'
   s.add_development_dependency 'factory_girl', '~> 2.0'
