@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path('../lib', __FILE__)
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'contactology/version'
 
 Gem::Specification.new do |s|
@@ -11,9 +12,9 @@ Gem::Specification.new do |s|
   s.summary     = %q{A Ruby interface to the Contactology email marketing API}
   s.description = %q{This library provides Ruby calls to interact with the Contactology email marketing API}
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = `git ls-files`.split($/)
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
   s.add_dependency 'hashie', '~> 1.1'
