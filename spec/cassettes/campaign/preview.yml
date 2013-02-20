@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Transactional&senderEmail=sender@example.com&senderName=Sender%20Example&subject=Factory%20Campaign%20Message&testContact%5Bemail%5D=test-contact@example.com&testReplacements%5Bfirst_name%5D=John
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=da7bfa14d9240198b16d9826d0a2725c; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 05:15:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: '103'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 05:15:47 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=103&key=%{API_KEY}&method=Campaign_Preview
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=5c33b2f99751649ef0d3d17ce5fa5799; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 05:15:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"html":"<!DOCTYPE html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.0 Transitional\/\/EN\"
+        \"http:\/\/www.w3.org\/TR\/REC-html40\/loose.dtd\">\n<html><head><meta http-equiv=\"Content-Type\"
+        content=\"text\/html;charset=utf-8\"><\/head><\/html>\n","text":"This is a
+        good message! \tEnvy Labs LLC\n\t123 That Way\n\t\n\tSome City, Utah 12345\nThis
+        message sent by:\n\t\t\t\t\tEnvy Labs LLC\n\t\t\t\t\t123 That Way\n\t\t\t\t\tSome
+        City, Utah 12345\n\nGo to the following url to unsubscribe: http:\/\/clicks.skem1.com\/r\/?g=103&c=10509&p=&l=0\n\nAbout
+        this list: http:\/\/clicks.skem1.com\/manage\/about_list.php?g=103&c=10509&p=\n\n\n\nManage
+        Your Subscription: http:\/\/clicks.skem1.com\/manage\/?g=103&c=10509&p=\n\nForward
+        to Friend: http:\/\/clicks.skem1.com\/f\/?g=103&c=10509&p=\n\nPowered By Contactology,
+        Inc. http:\/\/www.contactology.com","links":[]}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 05:15:47 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=103&key=%{API_KEY}&method=Campaign_Delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=0ce17ca3d97fee6241627a7d20b7bd22; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 05:15:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: 'true'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 05:15:48 GMT
+recorded_with: VCR 2.4.0

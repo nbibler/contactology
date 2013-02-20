@@ -10,18 +10,16 @@ describe Contactology::Campaign do
   end
 
   context '.find' do
-    context 'for a known campaign' do
-      use_vcr_cassette 'campaign/find/success'
-      let(:list) { Factory :list }
-      let(:campaign) { Factory :standard_campaign, :recipients => list }
+    context 'for a known campaign', :vcr => {:cassette_name => 'campaign/find/success'} do
+      let(:list) { create :list }
+      let(:campaign) { create :standard_campaign, :recipients => list }
       subject { Contactology::Campaign.find campaign.id }
       after(:each) { list.destroy; campaign.destroy }
 
       it { should be_a Contactology::Campaign }
     end
 
-    context 'for an unknown campaign' do
-      use_vcr_cassette 'campaign/find/failure'
+    context 'for an unknown campaign', :vcr => {:cassette_name => 'campaign/find/failure'} do
       subject { Contactology::Campaign.find 123456789 }
 
       it { should be_nil }
@@ -29,10 +27,9 @@ describe Contactology::Campaign do
   end
 
   context '.find_by_name' do
-    context 'for a known campaign' do
-      use_vcr_cassette 'campaign/find_by_name/success'
-      let(:list) { Factory :list }
-      let(:campaign) { Factory :standard_campaign, :recipients => list, :name => 'test-find-by-name' }
+    context 'for a known campaign', :vcr => {:cassette_name => 'campaign/find_by_name/success'} do
+      let(:list) { create :list }
+      let(:campaign) { create :standard_campaign, :recipients => list, :name => 'test-find-by-name' }
       after(:each) { list.destroy; campaign.destroy }
       subject { Contactology::Campaign.find_by_name campaign.name }
 
@@ -40,32 +37,29 @@ describe Contactology::Campaign do
       its(:name) { should == campaign.name }
     end
 
-    context 'for an unknown campaign' do
-      use_vcr_cassette 'campaign/find_by_name/failure'
+    context 'for an unknown campaign', :vcr => {:cassette_name => 'campaign/find_by_name/failure'} do
       subject { Contactology::Campaign.find_by_name 'unknown' }
 
       it { should be_nil }
     end
   end
 
-  context '#destroy' do
-    use_vcr_cassette 'campaign/destroy'
-    let(:list) { Factory :list }
-    let(:campaign) { Factory :standard_campaign, :recipients => list }
+  context '#destroy', :vcr => {:cassette_name => 'campaign/destroy'} do
+    let(:list) { create :list }
+    let(:campaign) { create :standard_campaign, :recipients => list }
     after(:each) { list.destroy }
 
     subject { campaign.destroy }
 
-    it 'removes the campaign from Contactology' do
+    it 'removes the campaign from Contactology and returns true' do
+      # Combined specs for VCR recording consistency
       expect { subject }.to change { Contactology::Campaign.find campaign.id }.to(nil)
+      should be_true
     end
-
-    it { should be_true }
   end
 
-  context '#preview' do
-    use_vcr_cassette 'campaign/preview'
-    let(:campaign) { Factory :transactional_campaign }
+  context '#preview', :vcr => {:cassette_name => 'campaign/preview'} do
+    let(:campaign) { create :transactional_campaign }
     after(:each) { campaign.destroy }
 
     subject { campaign.preview }

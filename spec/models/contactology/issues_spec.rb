@@ -11,14 +11,14 @@ describe Contactology::Issues do
   end
 
   it 'holds Contactology::Issue objects' do
-    issues = Contactology::Issues.new('issues' => [Factory.attributes_for(:issue)])
+    issues = Contactology::Issues.new('issues' => [attributes_for(:issue)])
     issues.should_not be_empty
     issues.all? { |i| i.kind_of?(Contactology::Issue) }.should be_true
   end
 
   it 'converts pushed objects to Issue instances' do
     expect {
-      issues << Factory.attributes_for(:issue)
+      issues << attributes_for(:issue)
     }.to change(issues, :size).by(1)
 
     issues.all? { |i| i.kind_of? Contactology::Issue }.should be_true

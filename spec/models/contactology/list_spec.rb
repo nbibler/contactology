@@ -3,8 +3,7 @@
 require 'spec_helper'
 
 describe Contactology::List do
-  context '.all' do
-    use_vcr_cassette 'list/all'
+  context '.all', :vcr => {:cassette_name => 'list/all'} do
     let!(:list) { Contactology::List.create :name => 'all-test-list' }
     after(:each) { list.destroy }
 
@@ -34,8 +33,7 @@ describe Contactology::List do
       }.to raise_error(ArgumentError)
     end
 
-    context 'when successful' do
-      use_vcr_cassette 'list/create'
+    context 'when successful', :vcr => {:cassette_name => 'list/create'} do
       let(:list) { Contactology::List.create :name => 'creationtest' }
       subject { list }
       after(:each) { list.destroy }
@@ -50,8 +48,7 @@ describe Contactology::List do
   end
 
   context '.find' do
-    context 'when successful' do
-      use_vcr_cassette 'list/find/success'
+    context 'when successful', :vcr => {:cassette_name => 'list/find/success'} do
       let(:list) { Contactology::List.create :name => 'find-success' }
       subject { Contactology::List.find list.id }
       after(:each) { list.destroy }
@@ -63,29 +60,26 @@ describe Contactology::List do
       its(:name) { should == list.name }
     end
 
-    context 'for an unknown list' do
-      use_vcr_cassette 'list/find/unknown'
+    context 'for an unknown list', :vcr => {:cassette_name => 'list/find/unknown'} do
       subject { Contactology::List.find '123456789' }
 
       it { should be_nil }
     end
   end
 
-  context '#destroy' do
-    use_vcr_cassette 'list/destroy'
+  context '#destroy', :vcr => {:cassette_name => 'list/destroy'} do
     let(:list) { Contactology::List.create :name => 'destroy-list' }
     subject { list.destroy }
 
-    it 'removes the list from Contactology' do
-      expect { list.destroy }.to change { Contactology::List.find list.id }.to(nil)
+    it 'removes the list from Contactology and returns true' do
+      # specs combined for VCR consistency.
+      expect { subject }.to change { Contactology::List.find list.id }.to(nil)
+      should be_true
     end
-
-    it { should be_true }
   end
 
   context '#import' do
-    context 'when successful' do
-      use_vcr_cassette 'list/import/success'
+    context 'when successful', :vcr => {:cassette_name => 'list/import/success'} do
       let(:list) { Contactology::List.create :name => 'import-test' }
       let(:email) { 'import@example.com' }
       let(:contact) { Contactology::Contact.find email }
@@ -101,8 +95,7 @@ describe Contactology::List do
   end
 
   context '#subscribe' do
-    context 'when successful' do
-      use_vcr_cassette 'list/subscribe/success'
+    context 'when successful', :vcr => {:cassette_name => 'list/subscribe/success'} do
       let(:contact) { Contactology::Contact.create :email => 'successful-subscribe@example.com' }
       let(:list) { Contactology::List.create :name => 'subscribe-test' }
       after(:each) { contact.destroy; list.destroy }
@@ -113,8 +106,7 @@ describe Contactology::List do
   end
 
   context '#unsubscribe' do
-    context 'when successful' do
-      use_vcr_cassette 'list/unsubscribe/success'
+    context 'when successful', :vcr => {:cassette_name => 'list/unsubscribe/success'} do
       let(:contact) { Contactology::Contact.create :email => 'successful-unsubscribe@example.com' }
       let(:list) { Contactology::List.create :name => 'unsubscribe-test' }
       before(:each) { list.subscribe contact.email }

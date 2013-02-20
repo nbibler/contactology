@@ -3,13 +3,13 @@
 require 'spec_helper'
 
 describe Contactology::TransactionalMessage do
-  let(:message) { Factory.build_via_new :transactional_message }
+  let(:message) { build :transactional_message }
   subject { message }
 
   context '#campaign' do
     it 'is required' do
       expect {
-        Contactology::TransactionalMessage.new Factory.attributes_for(:transactional_message).merge(:campaign => nil)
+        Contactology::TransactionalMessage.new attributes_for(:transactional_message).merge(:campaign => nil)
       }.to raise_error(ArgumentError)
     end
   end
@@ -17,7 +17,7 @@ describe Contactology::TransactionalMessage do
   context '#contact' do
     it 'is required' do
       expect {
-        Contactology::TransactionalMessage.new Factory.attributes_for(:transactional_message).merge(:contact => nil)
+        Contactology::TransactionalMessage.new attributes_for(:transactional_message).merge(:contact => nil)
       }.to raise_error(ArgumentError)
     end
   end
@@ -25,17 +25,16 @@ describe Contactology::TransactionalMessage do
   context '#replacements' do
     it 'is required' do
       expect {
-        Contactology::TransactionalMessage.new Factory.attributes_for(:transactional_message).merge(:replacements => nil)
+        Contactology::TransactionalMessage.new attributes_for(:transactional_message).merge(:replacements => nil)
       }.to raise_error(ArgumentError)
     end
   end
 
   context '#send_message' do
-    context 'when successful' do
-      use_vcr_cassette 'transactional_message/send_message/success'
-      let(:contact) { Factory :contact }
-      let(:campaign) { Factory :transactional_campaign }
-      let(:message) { Factory.build_via_new :transactional_message, :campaign => campaign, :contact => contact }
+    context 'when successful', :vcr => {:cassette_name => 'transactional_message/send_message/success'} do
+      let(:contact) { create :contact }
+      let(:campaign) { create :transactional_campaign }
+      let(:message) { build :transactional_message, :campaign => campaign, :contact => contact }
       after(:each) { contact.destroy; campaign.destroy }
 
       subject { message.send_message }
@@ -43,11 +42,10 @@ describe Contactology::TransactionalMessage do
       it { should be_true }
     end
 
-    context 'when unsuccessful' do
-      use_vcr_cassette 'transactional_message/send_message/failure'
-      let(:contact) { Factory :contact }
-      let(:campaign) { Factory :transactional_campaign }
-      let(:message) { Factory.build_via_new :transactional_message, :campaign => campaign, :contact => contact }
+    context 'when unsuccessful', :vcr => {:cassette_name => 'transactional_message/send_message/failure'} do
+      let(:contact) { create :contact }
+      let(:campaign) { create :transactional_campaign }
+      let(:message) { build :transactional_message, :campaign => campaign, :contact => contact }
       before(:each) { campaign.destroy }
       after(:each) { contact.destroy }
 
@@ -60,7 +58,7 @@ describe Contactology::TransactionalMessage do
   context '#source' do
     it 'is required' do
       expect {
-        Contactology::TransactionalMessage.new Factory.attributes_for(:transactional_message).merge(:source => nil)
+        Contactology::TransactionalMessage.new attributes_for(:transactional_message).merge(:source => nil)
       }.to raise_error(ArgumentError)
     end
   end
