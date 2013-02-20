@@ -5,7 +5,7 @@ require 'spec_helper'
 describe Contactology::Campaigns::Standard do
   context '.create' do
     context 'when successful', :vcr => {:cassette_name => 'campaigns/standard/create/success'} do
-      let(:list) { Factory :list, :name => 'campaign-standard-create-success' }
+      let(:list) { create :list, :name => 'campaign-standard-create-success' }
       let(:campaign) { create_campaign :recipients => list }
       after(:each) { list.destroy; campaign.destroy }
 
@@ -16,7 +16,7 @@ describe Contactology::Campaigns::Standard do
     end
 
     context 'with invalid data', :vcr => {:cassette_name => 'campaigns/standard/create/invalid'} do
-      let(:list) { Factory :list, :name => 'campaign-standard-create-invalid' }
+      let(:list) { create :list, :name => 'campaign-standard-create-invalid' }
       let(:campaign) { create_campaign :sender_email => 'bad@example', :recipients => list }
       after(:each) { list.destroy }
 
@@ -26,7 +26,7 @@ describe Contactology::Campaigns::Standard do
     end
 
     context 'with required attributes missing', :vcr => {:cassette_name => 'campaigns/standard/create/failure'} do
-      let(:list) { Factory :list, :name => 'campaign-standard-create-failure' }
+      let(:list) { create :list, :name => 'campaign-standard-create-failure' }
       let(:campaign) { create_campaign :name => nil, :recipients => list }
       after(:each) { list.destroy }
 
@@ -40,9 +40,9 @@ describe Contactology::Campaigns::Standard do
 
   context '#send_campaign' do
     context 'when successful', :vcr => {:cassette_name => 'campaigns/standard/send_campaign/success'} do
-      let(:list) { Factory :list, :name => 'send-standard-campaign-success' }
-      let(:contact) { Factory :contact }
-      let(:campaign) { Factory :standard_campaign, :recipients => list }
+      let(:list) { create :list, :name => 'send-standard-campaign-success' }
+      let(:contact) { create :contact }
+      let(:campaign) { create :standard_campaign, :recipients => list }
 
       before(:each) { list.subscribe contact }
       after(:each) { list.destroy; contact.destroy; campaign.destroy }
@@ -55,9 +55,9 @@ describe Contactology::Campaigns::Standard do
     end
 
     context 'when unsuccessful (high spam score)', :vcr => {:cassette_name => 'campaigns/standard/send_campaign/failure'} do
-      let(:list) { Factory :list, :name => 'send-standard-campaign-failure' }
-      let(:contact) { Factory :contact }
-      let(:campaign) { Factory :standard_campaign, :recipients => list, :content => {'text' => 'OMG BUY VIAGRA'} }
+      let(:list) { create :list, :name => 'send-standard-campaign-failure' }
+      let(:contact) { create :contact }
+      let(:campaign) { create :standard_campaign, :recipients => list, :content => {'text' => 'OMG BUY VIAGRA'} }
 
       before(:each) { list.subscribe(contact) }
       after(:each) { list.destroy; contact.destroy; campaign.destroy }
@@ -81,9 +81,9 @@ describe Contactology::Campaigns::Standard do
     end
 
     context 'when unsuccessful (attributes missing)', :vcr => {:cassette_name => 'campaigns/standard/send_campaign/failure_missing_attributes'} do
-      let(:list) { Factory :list, :name => 'send-standard-campaign-failure' }
-      let(:contact) { Factory :contact }
-      let(:campaign) { Factory :standard_campaign, :recipients => list }
+      let(:list) { create :list, :name => 'send-standard-campaign-failure' }
+      let(:contact) { create :contact }
+      let(:campaign) { create :standard_campaign, :recipients => list }
 
       before(:each) { list.subscribe(contact); campaign.id = nil }
       after(:each) { list.destroy; contact.destroy; campaign.destroy }
@@ -112,6 +112,6 @@ describe Contactology::Campaigns::Standard do
 
 
   def create_campaign(attributes = {})
-    Contactology::Campaigns::Standard.create Factory.attributes_for(:standard_campaign).merge(attributes)
+    Contactology::Campaigns::Standard.create attributes_for(:standard_campaign).merge(attributes)
   end
 end

@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=0ff1a242b31d82d5952327fd903383dd; path=/
+      - PHPSESSID=8e92647ef50548b0c807149b2f253780; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,17 +33,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:11:56 GMT
+      - Wed, 20 Feb 2013 05:15:22 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: '135'
+      string: '177'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:11:56 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:22 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=135&method=List_Get_Info
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=177&method=List_Get_Info
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=0b7fd6572ecf7e3943c320120cc40d3f; path=/
+      - PHPSESSID=e9009643a8d3021b6aab86da938e90a7; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -74,18 +74,18 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:11:56 GMT
+      - Wed, 20 Feb 2013 05:15:22 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"listId":"135","name":"import-test","description":null,"type":"public","created":"2013-02-20
-        04:11:56","optIn":false}'
+      string: ! '{"listId":"177","name":"import-test","description":null,"type":"public","created":"2013-02-20
+        05:15:22","optIn":false}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:11:56 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:22 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?contacts%5Bemail%5D=import@example.com&key=%{API_KEY}&listId=135&method=List_Import_Contacts&optionalParameters%5BactivateDeleted%5D=true&optionalParameters%5BupdateCustomFields%5D=true&source=Manual%20Entry
+    uri: https://api.emailcampaigns.net/2/REST/?contacts%5Bemail%5D=import@example.com&key=%{API_KEY}&listId=177&method=List_Import_Contacts&optionalParameters%5BactivateDeleted%5D=true&optionalParameters%5BupdateCustomFields%5D=true&source=Manual%20Entry
     body:
       encoding: US-ASCII
       string: ''
@@ -102,7 +102,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=120595a33106d51002dda116ae285464; path=/
+      - PHPSESSID=6b2838ca1f1efd75319748cc50725b00; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -116,17 +116,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:11:56 GMT
+      - Wed, 20 Feb 2013 05:15:23 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: ! '{"errors":[],"success":1}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:11:56 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:23 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=135&method=List_Delete
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=177&method=List_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -143,7 +143,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=537fd7c5de2c8dad545bb76ce82ef8c1; path=/
+      - PHPSESSID=98b49e572cf51a503bdd6408b7e592a4; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -157,14 +157,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:11:57 GMT
+      - Wed, 20 Feb 2013 05:15:23 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:11:57 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:23 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=import@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
@@ -184,7 +184,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=9c07daa553774b45bb27f040cf325887; path=/
+      - PHPSESSID=1b30747f11d9c40f178fba01f2118ebb; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -198,7 +198,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:11:57 GMT
+      - Wed, 20 Feb 2013 05:15:23 GMT
       Server:
       - lighttpd/1.4.28
     body:
@@ -206,7 +206,7 @@ http_interactions:
       string: ! '{"import@example.com":{"contactId":"17","email":"import@example.com","source":"Manual
         Entry","status":"active","customFields":{"first_name":"","last_name":"","email_address":"import@example.com"}}}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:11:58 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:24 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=import@example.com&key=%{API_KEY}&method=Contact_Delete
@@ -226,7 +226,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=eb628b71a03f5e9bbbb2850ca3ff8352; path=/
+      - PHPSESSID=9cc5cebfeecbabfd881caf77412eeff0; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -240,12 +240,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:11:58 GMT
+      - Wed, 20 Feb 2013 05:15:24 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:11:58 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:24 GMT
 recorded_with: VCR 2.4.0

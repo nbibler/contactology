@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=3234c9ddce982ed84ef33ccd7b381a14; path=/
+      - PHPSESSID=87171deb249617176befd9fb28463bcb; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,17 +33,100 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:19:33 GMT
+      - Wed, 20 Feb 2013 05:18:16 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: '189'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 05:18:16 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=189&method=List_Get_Info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=3330dd1a21f6bfe2350d4face0af3f77; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 05:18:16 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: US-ASCII
+      string: ! '{"listId":"189","name":"Factory List","description":null,"type":"public","created":"2013-02-20
+        05:18:16","optIn":false}'
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 05:18:16 GMT
+- request:
+    method: get
+    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Standard&recipients%5Blist%5D=189&senderEmail=sender@example.com&senderName=Sender%20Example&subject=Factory%20Campaign%20Message
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.2.10
+      Set-Cookie:
+      - PHPSESSID=79f3c42c233d33f322c8eb26943953ac; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 20 Feb 2013 05:18:16 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: '117'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:33 GMT
+  recorded_at: Wed, 20 Feb 2013 05:18:16 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=117&method=List_Get_Info
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=117&key=%{API_KEY}&method=Campaign_Get_Info
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +143,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=7391148bc08658955531e52d1451ee34; path=/
+      - PHPSESSID=c5916ecd71a3b1f7d8c9f11024c4b63a; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -74,18 +157,19 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:19:34 GMT
+      - Wed, 20 Feb 2013 05:18:17 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"listId":"117","name":"Factory List","description":null,"type":"public","created":"2013-02-20
-        03:19:33","optIn":false}'
+      string: ! '{"campaignId":"117","campaignName":"factory campaign","type":"standard","contentType":"standard","status":"draft","recipients":{"list":["189"]},"exclusions":[],"subject":"Factory
+        Campaign Message","senderName":"Sender Example","senderEmail":"sender@example.com","recipientName":"","replyToName":"","replyToEmail":null,"content":{"html":"","text":"This
+        is a good message! {COMPANY_ADDRESS}"},"startTime":"2013-02-20 05:18:16","authenticate":false,"trackReplies":false,"showInArchive":false,"viewInBrowser":false,"trackOpens":true,"trackClickThruHTML":true,"trackClickThruText":true,"googleAnalyticsName":null,"clickTaleName":null,"clickTaleCustomFields":[""],"useCustomUrlParameters":null,"customUrlParameters":null,"footerId":"0","facebookAutopost":{"facebookAccount":null,"facebookLocation":null,"facebookName":null,"facebookDescription":null,"facebookPicture":null},"twitterAutopost":{"twitterAccount":null}}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:34 GMT
+  recorded_at: Wed, 20 Feb 2013 05:18:17 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Standard&recipients%5Blist%5D=117&senderEmail=nate@envylabs.com&senderName=Nate%20Bibler&subject=Factory%20Campaign%20Message
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=117&key=%{API_KEY}&method=Campaign_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -102,7 +186,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=d1b929ad9d31d3424d43eed4f3920005; path=/
+      - PHPSESSID=13447e4859a6a336f5b032af413770a3; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -116,101 +200,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:19:34 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: US-ASCII
-      string: '61'
-    http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:34 GMT
-- request:
-    method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignId=61&key=%{API_KEY}&method=Campaign_Get_Info
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Powered-By:
-      - PHP/5.2.10
-      Set-Cookie:
-      - PHPSESSID=305ea768b91fd05d080a3a19c505a151; path=/
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-      Pragma:
-      - no-cache
-      Content-Type:
-      - text/plain;charset=UTF-8
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Wed, 20 Feb 2013 03:19:34 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: US-ASCII
-      string: ! '{"campaignId":"61","campaignName":"factory campaign","type":"standard","contentType":"standard","status":"draft","recipients":{"list":["117"]},"exclusions":[],"subject":"Factory
-        Campaign Message","senderName":"Nate Bibler","senderEmail":"nate@envylabs.com","recipientName":"","replyToName":"","replyToEmail":null,"content":{"html":"","text":"This
-        is a good message! {COMPANY_ADDRESS}"},"startTime":"2013-02-20 03:19:34","authenticate":false,"trackReplies":false,"showInArchive":false,"viewInBrowser":false,"trackOpens":true,"trackClickThruHTML":true,"trackClickThruText":true,"googleAnalyticsName":null,"clickTaleName":null,"clickTaleCustomFields":[""],"useCustomUrlParameters":null,"customUrlParameters":null,"footerId":"0","facebookAutopost":{"facebookAccount":null,"facebookLocation":null,"facebookName":null,"facebookDescription":null,"facebookPicture":null},"twitterAutopost":{"twitterAccount":null}}'
-    http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:34 GMT
-- request:
-    method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignId=61&key=%{API_KEY}&method=Campaign_Delete
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - contactology/0.1.2 (Rubygems; Ruby 1.9.3 x86_64-darwin12.2.0)
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Powered-By:
-      - PHP/5.2.10
-      Set-Cookie:
-      - PHPSESSID=de70fbcef0b9c7178b94feafafbca052; path=/
-      Expires:
-      - Thu, 19 Nov 1981 08:52:00 GMT
-      Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-      Pragma:
-      - no-cache
-      Content-Type:
-      - text/plain;charset=UTF-8
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Wed, 20 Feb 2013 03:19:35 GMT
+      - Wed, 20 Feb 2013 05:18:17 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:35 GMT
+  recorded_at: Wed, 20 Feb 2013 05:18:17 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignId=61&key=%{API_KEY}&method=Campaign_Get_Info
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=117&key=%{API_KEY}&method=Campaign_Get_Info
     body:
       encoding: US-ASCII
       string: ''
@@ -227,7 +227,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=29e7fcf7cf07a36eb155c1b5008cb7e9; path=/
+      - PHPSESSID=f0fd9412be958c8c61f623fd396810b9; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -241,17 +241,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:19:35 GMT
+      - Wed, 20 Feb 2013 05:18:18 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"result":"error","message":"Input Error: campaignId 61 not found","code":601}'
+      string: ! '{"result":"error","message":"Input Error: campaignId 117 not found","code":601}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:35 GMT
+  recorded_at: Wed, 20 Feb 2013 05:18:18 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=117&method=List_Delete
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=189&method=List_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -268,7 +268,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=c644e71cc9dd7aaf577ebb38696d65ae; path=/
+      - PHPSESSID=4569538230ace7bfbe824d5815fb50da; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -282,12 +282,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:19:35 GMT
+      - Wed, 20 Feb 2013 05:18:18 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:19:36 GMT
+  recorded_at: Wed, 20 Feb 2013 05:18:18 GMT
 recorded_with: VCR 2.4.0

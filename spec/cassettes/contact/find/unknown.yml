@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=b7fb8ae4e4c3fa96e938678db4d07b66; path=/
+      - PHPSESSID=7abf3f8c16a51874e148f0087260ee83; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,12 +33,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:42:30 GMT
+      - Wed, 20 Feb 2013 05:16:36 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: ! '[]'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:42:31 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:36 GMT
 recorded_with: VCR 2.4.0

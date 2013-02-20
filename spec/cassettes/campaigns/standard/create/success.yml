@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=1fac9edf92f9f1bdfa1e5305033ad547; path=/
+      - PHPSESSID=39ac048e926e1cc040d3e143f63b0689; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,17 +33,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:29:33 GMT
+      - Wed, 20 Feb 2013 05:14:23 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: '127'
+      string: '155'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:29:33 GMT
+  recorded_at: Wed, 20 Feb 2013 05:14:23 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=127&method=List_Get_Info
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=155&method=List_Get_Info
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=db7e90bc12d8ea3886d63b3bc416c60f; path=/
+      - PHPSESSID=79fb306746e918eb5377469dab571462; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -74,18 +74,18 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:29:34 GMT
+      - Wed, 20 Feb 2013 05:14:24 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"listId":"127","name":"campaign-standard-create-success","description":null,"type":"public","created":"2013-02-20
-        03:29:33","optIn":false}'
+      string: ! '{"listId":"155","name":"campaign-standard-create-success","description":null,"type":"public","created":"2013-02-20
+        05:14:23","optIn":false}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:29:34 GMT
+  recorded_at: Wed, 20 Feb 2013 05:14:24 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Standard&recipients%5Blist%5D=127&senderEmail=nate@envylabs.com&senderName=Nate%20Bibler&subject=Factory%20Campaign%20Message
+    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Standard&recipients%5Blist%5D=155&senderEmail=sender@example.com&senderName=Sender%20Example&subject=Factory%20Campaign%20Message
     body:
       encoding: US-ASCII
       string: ''
@@ -102,7 +102,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=5c8b513fbe8099ff7393180eaf780582; path=/
+      - PHPSESSID=3417b5a9748ccd3c25e5db2dc2e6aad3; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -116,17 +116,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:29:34 GMT
+      - Wed, 20 Feb 2013 05:14:24 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: '75'
+      string: '89'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:29:34 GMT
+  recorded_at: Wed, 20 Feb 2013 05:14:24 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=127&method=List_Delete
+    uri: https://api.emailcampaigns.net/2/REST/?key=%{API_KEY}&listId=155&method=List_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -143,7 +143,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=2ad683c8c3a088189560861d52c00162; path=/
+      - PHPSESSID=b4f1e36607fb41436085847820d1afea; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -157,17 +157,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:29:34 GMT
+      - Wed, 20 Feb 2013 05:14:24 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:29:35 GMT
+  recorded_at: Wed, 20 Feb 2013 05:14:25 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignId=75&key=%{API_KEY}&method=Campaign_Delete
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=89&key=%{API_KEY}&method=Campaign_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -184,7 +184,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=58dbaf46947f290719da7caebde9aa8e; path=/
+      - PHPSESSID=047de98b5ceec5b5f71a0057a7557a13; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -198,12 +198,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:29:35 GMT
+      - Wed, 20 Feb 2013 05:14:25 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:29:35 GMT
+  recorded_at: Wed, 20 Feb 2013 05:14:25 GMT
 recorded_with: VCR 2.4.0

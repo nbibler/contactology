@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=74a8175b1dc1b68320b6ac0404ad6f49; path=/
+      - PHPSESSID=d174254d5efcb4004ebfc3f42b404ff5; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,7 +33,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:42:37 GMT
+      - Wed, 20 Feb 2013 05:16:32 GMT
       Server:
       - lighttpd/1.4.28
     body:
@@ -41,7 +41,7 @@ http_interactions:
       string: ! '{"result":"error","message":"Input error: no contact found for email
         unknown@example.com","code":601}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:42:37 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:32 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=unknown@example.com&key=%{API_KEY}&method=Contact_Delete
@@ -61,7 +61,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=e2e8e43f24799cf3945745e71224d540; path=/
+      - PHPSESSID=5eeb715f26bb39bafca9d88e1655796e; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -75,12 +75,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:42:40 GMT
+      - Wed, 20 Feb 2013 05:16:32 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'false'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:42:41 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:33 GMT
 recorded_with: VCR 2.4.0

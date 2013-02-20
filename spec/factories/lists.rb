@@ -1,5 +1,9 @@
 # encoding: UTF-8
 
-Factory.define :list, :class => Contactology::List do |l|
-  l.name 'Factory List'
+FactoryGirl.define do
+  factory :list, :class => Contactology::List do
+    name 'Factory List'
+
+    initialize_with { new(attributes) }
+  end
 end

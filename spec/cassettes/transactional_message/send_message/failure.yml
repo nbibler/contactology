@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20email.%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Transactional&senderEmail=sender@example.com&senderName=Sender%20Example&subject=Test%20Creation&testContact%5Bemail%5D=test-contact@example.com&testReplacements%5Bfirst_name%5D=John
+    uri: https://api.emailcampaigns.net/2/REST/?campaignName=factory%20campaign&content%5Btext%5D=This%20is%20a%20good%20message!%20%7BCOMPANY_ADDRESS%7D&key=%{API_KEY}&method=Campaign_Create_Transactional&senderEmail=sender@example.com&senderName=Sender%20Example&subject=Factory%20Campaign%20Message&testContact%5Bemail%5D=test-contact@example.com&testReplacements%5Bfirst_name%5D=John
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=e809ae820d6d1553c8c0f63b88e19980; path=/
+      - PHPSESSID=888e25aa21460b8ba3c2fb1a23221aef; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,17 +33,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:18:36 GMT
+      - Wed, 20 Feb 2013 05:16:43 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: '87'
+      string: '113'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:18:37 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:44 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignId=87&key=%{API_KEY}&method=Campaign_Delete
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=113&key=%{API_KEY}&method=Campaign_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=8ccf367c265661eca2d5eb96e38ba456; path=/
+      - PHPSESSID=4cde875d1957d22dfb68cb078a7cca79; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -74,14 +74,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:18:37 GMT
+      - Wed, 20 Feb 2013 05:16:44 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:18:37 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:44 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=factory-contact@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
@@ -101,7 +101,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=a0965dd29f7fcfb9dcd054287b01afc0; path=/
+      - PHPSESSID=130ab2130b1a8e6898da27b09053e3b8; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -115,17 +115,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:18:37 GMT
+      - Wed, 20 Feb 2013 05:16:44 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:18:38 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:44 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?campaignId=87&contact%5Bemail%5D=factory-contact@example.com&contact%5Bstatus%5D=active&key=%{API_KEY}&method=Campaign_Send_Transactional&replacements%5B_contactology%5D=Contactology&source=Factory%20Created
+    uri: https://api.emailcampaigns.net/2/REST/?campaignId=113&contact%5Bemail%5D=factory-contact@example.com&contact%5Bstatus%5D=active&key=%{API_KEY}&method=Campaign_Send_Transactional&replacements%5B_contactology%5D=Contactology&source=Factory%20Created
     body:
       encoding: US-ASCII
       string: ''
@@ -142,7 +142,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=2d489e701ed5f3ae179798f0b15d57c1; path=/
+      - PHPSESSID=54a15750932612bd31f92ccc189b46cf; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -156,15 +156,15 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:18:38 GMT
+      - Wed, 20 Feb 2013 05:16:45 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"result":"error","message":"Input Error: Campaign 87 has the wrong
+      string: ! '{"result":"error","message":"Input Error: Campaign 113 has the wrong
         status","code":601}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:18:38 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:45 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=factory-contact@example.com&key=%{API_KEY}&method=Contact_Delete
@@ -184,7 +184,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=95bca192efc1ed2f69b01e5560f30396; path=/
+      - PHPSESSID=ed2387c9e653f52980e28cf2e9481c08; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -198,12 +198,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:18:38 GMT
+      - Wed, 20 Feb 2013 05:16:45 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:18:38 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:45 GMT
 recorded_with: VCR 2.4.0

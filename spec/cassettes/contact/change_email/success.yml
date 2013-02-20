@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?email=changed-1361332386-39238@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    uri: https://api.emailcampaigns.net/2/REST/?email=changed-1361337379-43532@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=f70fcc2a96863124050a326c74ca8f9d; path=/
+      - PHPSESSID=0cb8f52d06bd015211526921af12a530; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,14 +33,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:53:07 GMT
+      - Wed, 20 Feb 2013 05:16:19 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: ! '[]'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:53:07 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:19 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=change-email-3@example.com&key=%{API_KEY}&method=Contact_Add&optionalParameters%5BupdateCustomFields%5D=true
@@ -60,7 +60,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=6b4de1feb79dc85993d09feb45b8c3f2; path=/
+      - PHPSESSID=c65d25cd62e1fda37514c469c5a26798; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -74,17 +74,17 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:53:07 GMT
+      - Wed, 20 Feb 2013 05:16:20 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:53:07 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:20 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?email=change-email-3@example.com&key=%{API_KEY}&method=Contact_Change_Email&newEmail=changed-1361332386-39238@example.com
+    uri: https://api.emailcampaigns.net/2/REST/?email=change-email-3@example.com&key=%{API_KEY}&method=Contact_Change_Email&newEmail=changed-1361337379-43532@example.com
     body:
       encoding: US-ASCII
       string: ''
@@ -101,7 +101,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=4e1744c400a6c95fe33610f56c5909b0; path=/
+      - PHPSESSID=e9ac4c0e6bd290343c045966ef5ce786; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -115,18 +115,18 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:53:07 GMT
+      - Wed, 20 Feb 2013 05:16:20 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"changed-1361332386-39238@example.com":{"contactId":"45","email":"changed-1361332386-39238@example.com","source":"API
+      string: ! '{"changed-1361337379-43532@example.com":{"contactId":"67","email":"changed-1361337379-43532@example.com","source":"API
         2 Contact_Add","status":"active"}}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:53:07 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:20 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?email=changed-1361332386-39238@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
+    uri: https://api.emailcampaigns.net/2/REST/?email=changed-1361337379-43532@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
     body:
       encoding: US-ASCII
       string: ''
@@ -143,7 +143,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=ae6a715e74ecb8121c571b629ec70dc1; path=/
+      - PHPSESSID=5ee071644646320c64508eb5ad1105ee; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -157,18 +157,18 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:53:08 GMT
+      - Wed, 20 Feb 2013 05:16:21 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
-      string: ! '{"changed-1361332386-39238@example.com":{"contactId":"45","email":"changed-1361332386-39238@example.com","source":"API
-        2 Contact_Add","status":"active","customFields":{"first_name":"","last_name":"","email_address":"changed-1361332386-39238@example.com"}}}'
+      string: ! '{"changed-1361337379-43532@example.com":{"contactId":"67","email":"changed-1361337379-43532@example.com","source":"API
+        2 Contact_Add","status":"active","customFields":{"first_name":"","last_name":"","email_address":"changed-1361337379-43532@example.com"}}}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:53:08 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:21 GMT
 - request:
     method: get
-    uri: https://api.emailcampaigns.net/2/REST/?email=changed-1361332386-39238@example.com&key=%{API_KEY}&method=Contact_Delete
+    uri: https://api.emailcampaigns.net/2/REST/?email=changed-1361337379-43532@example.com&key=%{API_KEY}&method=Contact_Delete
     body:
       encoding: US-ASCII
       string: ''
@@ -185,7 +185,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=ea1b7a47578630a10c0fd4017b749f47; path=/
+      - PHPSESSID=c577f75662d046dcf19dc58466e1e881; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -199,12 +199,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:53:08 GMT
+      - Wed, 20 Feb 2013 05:16:21 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:53:08 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:22 GMT
 recorded_with: VCR 2.4.0

@@ -5,7 +5,7 @@ require 'spec_helper'
 describe Contactology::Campaigns::Transactional do
   context '.create' do
     context 'when successful', :vcr => {:cassette_name => 'campaigns/transactional/create/success'} do
-      let(:campaign) { Contactology::Campaigns::Transactional.create Factory.attributes_for(:transactional_campaign) }
+      let(:campaign) { Contactology::Campaigns::Transactional.create attributes_for(:transactional_campaign) }
       after(:each) { campaign.destroy }
 
       subject { campaign }
@@ -16,7 +16,7 @@ describe Contactology::Campaigns::Transactional do
     end
 
     context 'when unsuccessful', :vcr => {:cassette_name => 'campaigns/transactional/create/failure'} do
-      let(:campaign) { Contactology::Campaigns::Transactional.create Factory.attributes_for(:transactional_campaign).merge(:content => {:text => 'bad'}) }
+      let(:campaign) { Contactology::Campaigns::Transactional.create attributes_for(:transactional_campaign).merge(:content => {:text => 'bad'}) }
 
       subject { campaign }
 
@@ -43,8 +43,8 @@ describe Contactology::Campaigns::Transactional do
 
   context '#send_campaign' do
     context 'when successful', :vcr => {:cassette_name => 'campaigns/transactional/send_campaign/success'} do
-      let(:contact) { Factory :contact }
-      let(:campaign) { Factory :transactional_campaign }
+      let(:contact) { create :contact }
+      let(:campaign) { create :transactional_campaign }
 
       after(:each) do
         campaign.destroy
@@ -59,7 +59,7 @@ describe Contactology::Campaigns::Transactional do
     end
 
     context 'when unsuccessful', :vcr => {:cassette_name => 'campaigns/transactional/send_campaign/failure'} do
-      let(:campaign) { Factory :transactional_campaign }
+      let(:campaign) { create :transactional_campaign }
       after(:each) { campaign.destroy }
 
       subject { campaign.send_campaign(Struct.new(:email).new('bad')) }

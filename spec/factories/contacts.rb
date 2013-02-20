@@ -1,5 +1,9 @@
 # encoding: UTF-8
 
-Factory.define :contact, :class => Contactology::Contact do |c|
-  c.email 'factory-contact@example.com'
+FactoryGirl.define do
+  factory :contact, :class => Contactology::Contact do
+    email 'factory-contact@example.com'
+
+    initialize_with { new(attributes) }
+  end
 end

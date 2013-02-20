@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=5c82f10a92859a03fa02ba0723571440; path=/
+      - PHPSESSID=7e72866a46fa3159bf7bc0f43ea2145a; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,7 +33,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 04:12:15 GMT
+      - Wed, 20 Feb 2013 05:15:06 GMT
       Server:
       - lighttpd/1.4.28
     body:
@@ -41,5 +41,5 @@ http_interactions:
       string: ! '{"result":"error","message":"Input Error: List 123456789 does not
         exist","code":601}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:12:15 GMT
+  recorded_at: Wed, 20 Feb 2013 05:15:06 GMT
 recorded_with: VCR 2.4.0

@@ -19,7 +19,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=c12204b462a1ac407e36f8c14ac75832; path=/
+      - PHPSESSID=93ee9d8fcb6d4adb60c3049b4d69fa94; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -33,14 +33,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:42:34 GMT
+      - Wed, 20 Feb 2013 05:16:22 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:42:34 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:22 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=active@example.com&key=%{API_KEY}&method=Contact_Get&optionalParameters%5BgetAllCustomFields%5D=true
@@ -60,7 +60,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=86a10512b6463b12070b08af7d67d408; path=/
+      - PHPSESSID=6dc15999ac5c1346eec0ffe9bab43f13; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -74,7 +74,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:42:34 GMT
+      - Wed, 20 Feb 2013 05:16:22 GMT
       Server:
       - lighttpd/1.4.28
     body:
@@ -82,7 +82,7 @@ http_interactions:
       string: ! '{"active@example.com":{"contactId":"9","email":"active@example.com","source":"API
         2 Contact_Add","status":"active","customFields":{"first_name":"","last_name":"","email_address":"active@example.com"}}}'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:42:34 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:22 GMT
 - request:
     method: get
     uri: https://api.emailcampaigns.net/2/REST/?email=active@example.com&key=%{API_KEY}&method=Contact_Delete
@@ -102,7 +102,7 @@ http_interactions:
       X-Powered-By:
       - PHP/5.2.10
       Set-Cookie:
-      - PHPSESSID=195700ad700170282359e9f461c5c0ed; path=/
+      - PHPSESSID=efa93149a3b5d2e1c4a3d12b850bcd03; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -116,12 +116,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 20 Feb 2013 03:42:34 GMT
+      - Wed, 20 Feb 2013 05:16:23 GMT
       Server:
       - lighttpd/1.4.28
     body:
       encoding: US-ASCII
       string: 'true'
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 03:42:34 GMT
+  recorded_at: Wed, 20 Feb 2013 05:16:23 GMT
 recorded_with: VCR 2.4.0

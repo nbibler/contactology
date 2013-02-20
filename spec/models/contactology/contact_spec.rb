@@ -16,12 +16,12 @@ describe Contactology::Contact do
       subject { contact }
       after(:each) { contact.destroy }
 
-      it 'creates a new contact' do
-        subject
+      it 'creates a new contact and returns a Contactology::Contact' do
+        # Combined specs for VCR recording consistency.
+        should be_a Contactology::Contact
         Contactology::Contact.find('created@example.com').should_not be_nil
       end
 
-      it { should be_kind_of Contactology::Contact }
       its(:email) { should eql 'created@example.com' }
       its(:active?) { should be_true }
     end
@@ -124,10 +124,10 @@ describe Contactology::Contact do
 
       subject { contact.lists }
 
-      it { should be_kind_of Enumerable }
-      it { should_not be_empty }
-
       it 'contains the subscribed list' do
+        # Combined specs for VCR recording consistency.
+        should be_an Enumerable
+        should_not be_empty
         subject.any? { |remote_list| remote_list.id == list.id }.should be_true
       end
     end

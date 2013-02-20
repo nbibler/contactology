@@ -1,7 +1,11 @@
 # encoding: UTF-8
 
-Factory.define :transactional_message, :class => Contactology::TransactionalMessage do |m|
-  m.campaign { Factory.build_via_new :transactional_campaign }
-  m.contact { Factory.attributes_for :contact }
-  m.source 'Factory Created'
+FactoryGirl.define do
+  factory :transactional_message, :class => Contactology::TransactionalMessage do
+    association :campaign, :factory => :transactional_campaign
+    contact { FactoryGirl.attributes_for :contact }
+    source 'Factory Created'
+
+    initialize_with { new(attributes) }
+  end
 end
