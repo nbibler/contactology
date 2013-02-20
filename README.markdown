@@ -54,10 +54,12 @@ your needs.
 This library uses [Travis CI][ci] to continuously test and remain compatible
 with the following Rubies:
 
-* MRI Ruby 1.8.7,
-* MRI Ruby 1.9.2, and
-* REE 1.8.7
+* MRI Ruby 1.9.2,
+* MRI Ruby 1.9.3
 
+Currently, the library should also work with MRI 1.8.7 and REE, but the
+development dependencies (factory_girl) are no longer compatible and therefore
+have been removed from continuous integration.
 
 [api]: http://www.contactology.com/email-marketing-api/ (Contactology API Documentation)
 [ci]: http://travis-ci.org/nbibler/contactology
