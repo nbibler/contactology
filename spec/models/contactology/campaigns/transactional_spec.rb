@@ -48,7 +48,7 @@ describe Contactology::Campaigns::Transactional do
     end
 
     context 'when unsuccessful' do
-      use_vcr_cassette 'campaigns/transactional/send_campaign/failure'#, record: :new_episodes
+      use_vcr_cassette 'campaigns/transactional/send_campaign/failure'
       let(:campaign) { Factory :transactional_campaign }
       after(:each) { campaign.destroy }
 

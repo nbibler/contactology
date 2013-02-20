@@ -1,4 +1,7 @@
 # encoding: UTF-8
+require 'vcr'
+require 'webmock'
+require 'rack'
 
 VCR.config do |config|
   config.cassette_library_dir = File.expand_path('../../fixtures/net', __FILE__)
