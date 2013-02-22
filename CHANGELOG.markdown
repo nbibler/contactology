@@ -2,6 +2,10 @@
 
 ## [Unreleased][unreleased]
 
+No significant changes.
+
+## [1.0.0][v1.0.0] / 2013-02-22
+
 * Enhancement
   * Updated and/or loosened dependent library versions in runtime and
     development. This, though, means that **testing is no longer maintained for
