@@ -40,7 +40,8 @@ No significant changes.
 * Bug fixes
   * Fix failure messages for Campaign#create request timeouts
 
-[unreleased]: http://github.com/nbibler/contactology/compare/v0.1.2...master
+[unreleased]: http://github.com/nbibler/contactology/compare/v1.0.0...master
+[v1.0.0]: http://github.com/nbibler/contactology/compare/v0.1.2...v1.0.0
 [v0.1.2]: http://github.com/nbibler/contactology/compare/v0.1.1...v0.1.2
 [v0.1.1]: http://github.com/nbibler/contactology/compare/v0.1.0...v0.1.1
 [v0.1.0]: http://github.com/nbibler/contactology/compare/v0.0.2...v0.1.0
